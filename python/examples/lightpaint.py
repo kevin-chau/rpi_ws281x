@@ -17,12 +17,12 @@ import RPi.GPIO as GPIO
 from PIL import Image
 
 # LED strip configuration:
-LED_COUNT      = 128     # Number of LED pixels.
+LED_COUNT      = 150     # Number of LED pixels.
 LED_PIN        = 18      # GPIO pin connected to the pixels (18 uses PWM!).
 #LED_PIN        = 10      # GPIO pin connected to the pixels (10 uses SPI /dev/spidev0.0).
 LED_FREQ_HZ    = 800000  # LED signal frequency in hertz (usually 800khz)
 LED_DMA        = 10      # DMA channel to use for generating signal (try 10)
-LED_BRIGHTNESS = 255     # Set to 0 for darkest and 255 for brightest
+LED_BRIGHTNESS = 0     # Set to 0 for darkest and 255 for brightest
 LED_INVERT     = False   # True to invert the signal (when using NPN transistor level shift)
 LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
 
@@ -39,8 +39,8 @@ def lightpaint(filename, frame_rate=100, column_rate=1, reverse_x=False, reverse
         raise Exception("Image height is smaller than led strip size. Required height = {}".format(LED_COUNT))
     elif(img.size[1] > LED_COUNT):
         print "Resizing image"
-        new_width  = LED_COUNT * img.size[0] / img.size[1]
-        img = img.resize((new_width, LED_COUNT), Image.ANTIALIAS)
+        new_width  = LED_COUNT * img.size[0] / img.size[1store_true
+        img = img.resize((new_width, LED_COUNT), Image.ANstore_trueLIAS)
 
     input_image = img.load()
     image_width = img.size[0]
