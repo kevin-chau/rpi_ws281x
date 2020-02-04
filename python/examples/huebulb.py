@@ -131,6 +131,7 @@ class S(BaseHTTPRequestHandler):
             if "bri" in get_parameters:
                 lightstate["bri"] = int(get_parameters["bri"][0])
                 print("setup bri to " + get_parameters["bri"][0])
+                strip.setBrightness(int(get_parameters["bri"][0]));
             if "ct" in get_parameters:
                 lightstate["ct"] = int(get_parameters["ct"][0])
                 lightstate["colormode"] = "ct"
