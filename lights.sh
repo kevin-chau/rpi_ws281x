@@ -1,4 +1,2 @@
 #!/bin/bash
-
-cd rpi_ws281x/python
-sudo PYTHONPATH=".:build/lib.linux-armv7l-2.7" python examples/strandtest.py
+sudo python ~/rpi_ws281x/python/examples/red.py -c
